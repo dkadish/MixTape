@@ -1,4 +1,3 @@
-
 ---
 title: 'MixTape: A hands-on Spotify remote for kids'
 difficulty: advanced
@@ -30,6 +29,7 @@ hardware:
 software:
   - ide-v2
 ---
+
 # MixTape
 Tape deck-like interface for Spotify using Arduino MKR 1010 and Adafruit PN532 NFC Breakout Board
 
@@ -67,7 +67,8 @@ The goals of this project are:
     - [ArduinoJSON](https://github.com/bblanchon/ArduinoJson)
     - [WiFiWebServer](https://github.com/khoih-prog/WiFiWebServer)
     - [SpotifyArduino](https://github.com/witnessmenow/spotify-api-arduino)
-All of the libraries except SpotifyArduino can be installed using the Library Manager in Arduino 2.0. SpotifyArduino must be installed as a .zip library (Download the .zip archive from the [github repository]() and install using `Sketch > Include Library > Add .ZIP Library`)
+    - 
+All of the libraries except SpotifyArduino can be installed using the Library Manager in Arduino 2.0. SpotifyArduino must be installed as a .zip library (Download the .zip archive from the [github repository](https://github.com/witnessmenow/spotify-api-arduino) and install using `Sketch > Include Library > Add .ZIP Library`)
 
 ### Circuit
 
@@ -125,6 +126,7 @@ HTTP server started
 Note the IP address (it will likely be something local like `192.168.1.x` if you are on a home network with basic settings). Open a web browser to that address.
 
 ![Get refresh token page](docs/get-refresh-token.png)
+
 You should land on a page like the one above. That page is being served from your MKR WiFi 1010 and the link contacts the Spotify Servers to authorise the app and get a refresh token that you will use in other scripts. Before you do that, you need to set the correct website and redirect URI for your app in the Spotify Developer settings.
 
 ![Set the website and redirect url in the Spotify Developer Settings](docs/website-and-redirect.png)
@@ -394,10 +396,13 @@ void loop() {
 ## In Real Life
 To test the system, I printed 9 album covers and taped them to NFC tags.
 ![NFC cards with album covers](docs/cards.jpg "NFC cards with album covers")
+
 This video shows the full process of writing an NFC tag:
-![Image not found: docs/tag-creation.mov](docs/tag-creation.mov "Image not found: docs/tag-creation.mov")
+https://github.com/dkadish/MixTape/assets/181041/a6e266e0-d02a-4993-9078-796920e5fbc1
+
 And here's how to play your song on Spotify using MixTape:
-![Changing tracks to Ghostbusters](docs/live-test.mp4)
+https://github.com/dkadish/MixTape/assets/181041/f574e476-5467-40df-a82d-ca97c6fdd215
+
 ## Conclusion
 In this project, we have configured the Spotify Web API to respond to an Arduino. We have practised writing and reading NFC tags and learned specifically how to write Spotify URIs to them. And we have connected that NFC-reading process to the Spotify API to trigger playing pre-selected songs using an NFC tag.
 
@@ -405,14 +410,3 @@ In doing so, we have created a fun, tactile way for younger children to select a
 
 ## To Do
 - [ ] The two sketches can be combined into a single sketch that retrieves the refresh token *and* controls the music.
-
-## Tracks used in the demo
-Ghostbusters: spotify:track:3m0y8qLoznUYi73SUBP8GI
-Dansstopp: spotify:track:0MvsvnSNZ9lm4UYvsl2nC5
-Gummibär: spotify:track:6nFYXpBgrNcZjbtNEuc6yR
-Drakdansen: spotify:track:7ceZhyPr1U8PPaGq4Fshoo
-Raptor på jakt: spotify:track:3cRmHMdcalueasgmweHd2r
-Trisse Triceratops: spotify:track:54r7MgCU5Enh6FZvZgKmd6
-Jag gillar kött: spotify:track:0WEYQi2sJqcGwEhRBIoYg2
-Stompalång tut pling sång: spotify:track:6fTrKV5xqHInP83B7di8Rd
-Gangnam Style: spotify:track:1R2SZUOGJqqBiLuvwKOT2Y
