@@ -398,10 +398,15 @@ To test the system, I printed 9 album covers and taped them to NFC tags.
 ![NFC cards with album covers](docs/cards.jpg "NFC cards with album covers")
 
 This video shows the full process of writing an NFC tag:
-https://github.com/dkadish/MixTape/assets/181041/a6e266e0-d02a-4993-9078-796920e5fbc1
+
+
+https://github.com/dkadish/MixTape/assets/181041/e3b9d258-b8e8-42dd-801f-6fd304e7c4e0
 
 And here's how to play your song on Spotify using MixTape:
-https://github.com/dkadish/MixTape/assets/181041/f574e476-5467-40df-a82d-ca97c6fdd215
+
+
+https://github.com/dkadish/MixTape/assets/181041/50665117-61a6-480f-96c6-a4fc59ae50b4
+
 
 ## Conclusion
 In this project, we have configured the Spotify Web API to respond to an Arduino. We have practised writing and reading NFC tags and learned specifically how to write Spotify URIs to them. And we have connected that NFC-reading process to the Spotify API to trigger playing pre-selected songs using an NFC tag.
