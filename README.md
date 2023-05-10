@@ -362,7 +362,7 @@ It is worth mentioning the `spotifySetup` function. Like `nfcSetup`, `spotifySet
 ## Tying it all together
 We have now covered all of the essential functionality in the `nfc.h` and `spotify.h` files. The main sketch file, `MixTape.ino`, unites all of this functionality in the main `setup` and `loop` functions.
 
-`setup()` initialises the Serial connection, used across the sketch and then calls `nfcSetup` and `soptifySetup`. Similarly, `loop` calls on both `nfcLoop` and `spotifyLoop`, the latter of which is empty, but exists in case some continually-running functionality is needed involving the Spotify API at a later date.
+`setup()` initialises the Serial connection, used across the sketch and then calls `nfcSetup` and `spotifySetup`. Similarly, `loop` calls on both `nfcLoop` and `spotifyLoop`, the latter of which is empty, but exists in case some continually-running functionality is needed involving the Spotify API at a later date.
 
 
 ```cpp
